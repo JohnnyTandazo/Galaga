@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actor id="id633815" PGFVersion="0.25" GSCVersion="1.25.6227">
+  <attributes>
+    <text id="name">Enemy1</text>
+    <real id="time">0</real>
+    <point id="position">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <size id="size">
+      <real id="width">31</real>
+      <real id="height">34</real>
+    </size>
+    <angle id="rotation">0</angle>
+    <color id="color">
+      <real id="red">1</real>
+      <real id="green">1</real>
+      <real id="blue">1</real>
+      <real id="alpha">1</real>
+    </color>
+    <image id="image">1</image>
+    <text id="tags" />
+    <boolean id="preloadArt">true</boolean>
+    <index id="id230622" name="Health">3</index>
+  </attributes>
+  <behaviors>
+    <behavior id="id152129" class="TimerBehavior" enabled="true">
+      <attributes>
+        <text id="name">Timer</text>
+        <text id="bundleName">Timer.behavior</text>
+        <index id="timerType">2</index>
+        <real id="interval">2</real>
+        <boolean id="runToCompletion">false</boolean>
+      </attributes>
+      <behaviors>
+        <behavior id="id184578" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.aspects.motion.attributes.linearVelocity.x</text>
+            <text id="RHS">
+              <expression>
+                <string xml:space="preserve">random(</string>
+                <string xml:space="preserve">150</string>
+                <string xml:space="preserve">, </string>
+                <string xml:space="preserve">250</string>
+                <string xml:space="preserve">)</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+      </behaviors>
+    </behavior>
+    <behavior id="id249264" class="TimerBehavior" enabled="true">
+      <attributes>
+        <text id="name">Timer</text>
+        <text id="bundleName">Timer.behavior</text>
+        <index id="timerType">1</index>
+        <real id="interval">2</real>
+        <boolean id="runToCompletion">false</boolean>
+      </attributes>
+      <behaviors>
+        <behavior id="id912447" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.aspects.motion.attributes.linearVelocity.x</text>
+            <text id="RHS">0</text>
+          </attributes>
+        </behavior>
+        <behavior id="id408859" class="TimerBehavior" enabled="true">
+          <attributes>
+            <text id="name">Timer</text>
+            <text id="bundleName">Timer.behavior</text>
+            <index id="timerType">0</index>
+            <real id="interval">
+              <expression>
+                <string xml:space="preserve">random(</string>
+                <string xml:space="preserve">1</string>
+                <string xml:space="preserve">, </string>
+                <string xml:space="preserve">3</string>
+                <string xml:space="preserve">)</string>
+              </expression>
+            </real>
+            <boolean id="runToCompletion">false</boolean>
+          </attributes>
+          <behaviors>
+            <behavior id="id535292" class="SpawnAction" enabled="true">
+              <attributes>
+                <text id="name">Spawn Actor</text>
+                <text id="bundleName">Spawn.behavior</text>
+                <text id="prototypeKey">id122832</text>
+                <angle id="direction">
+                  <expression>
+                    <string xml:space="preserve">vectorToAngle(</string>
+                    <reference keypath="game.attributes.id447689" />
+                    <string xml:space="preserve">, </string>
+                    <reference keypath="game.attributes.id400432" />
+                    <string xml:space="preserve">)</string>
+                  </expression>
+                </angle>
+                <index id="directionSpace">1</index>
+                <real id="x">0</real>
+                <real id="y">0</real>
+                <index id="positionSpace">0</index>
+                <index id="layerOrder">0</index>
+              </attributes>
+            </behavior>
+          </behaviors>
+        </behavior>
+      </behaviors>
+    </behavior>
+    <behavior id="id226431" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Rule</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id864490" eventType="overlaps or collides" pluginPredicateTypeIndex="0" class="Collision">
+          <attributes>
+            <text id="name">default name</text>
+            <index id="conditionType">0</index>
+          </attributes>
+          <predicate type="collision">
+            <attributes>
+              <text id="prototypeKey">id456942</text>
+              <text id="actorTag" />
+              <real id="mode">0</real>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id849072" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.id230622</text>
+            <text id="RHS">
+              <expression>
+                <reference keypath="self.attributes.id230622" />
+                <string xml:space="preserve">-1</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+      </behaviors>
+    </behavior>
+    <behavior id="id696619" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Rule</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id942687" eventType="mouse position" pluginPredicateTypeIndex="0" class="AttributeCondition">
+          <attributes>
+            <index id="conditionType">1</index>
+            <text id="subjectAttribute">self.attributes.id230622</text>
+            <text id="name">default name</text>
+          </attributes>
+          <predicate type="number">
+            <attributes>
+              <text id="operator">=</text>
+              <real id="RHS">0</real>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id174402" class="DestroyAction" enabled="true">
+          <attributes>
+            <text id="name">Destroy</text>
+            <text id="bundleName">Destroy.behavior</text>
+          </attributes>
+        </behavior>
+      </behaviors>
+    </behavior>
+  </behaviors>
+  <aspects>
+    <graphics>
+      <attributes>
+        <boolean id="visible">true</boolean>
+        <enumeration id="blendingMode">0</enumeration>
+        <enumeration id="horizontalWrap">0</enumeration>
+        <enumeration id="verticalWrap">0</enumeration>
+        <enumeration id="horizontalAnchor">0</enumeration>
+        <enumeration id="verticalAnchor">0</enumeration>
+        <boolean id="flipHorizontally">false</boolean>
+        <boolean id="flipVertically">false</boolean>
+        <integer id="tileWidth">124</integer>
+        <integer id="tileHeight">135</integer>
+      </attributes>
+    </graphics>
+    <motion>
+      <attributes>
+        <point id="linearVelocity">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <point id="centerOfMass">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <real id="angularVelocity">0</real>
+        <real id="maxSpeed">0</real>
+        <boolean id="applyMaxSpeed">false</boolean>
+        <boolean id="pin">false</boolean>
+      </attributes>
+    </motion>
+    <physics>
+      <attributes>
+        <real id="density">1</real>
+        <real id="friction">3</real>
+        <real id="restitution">1</real>
+        <boolean id="fixedRotation">false</boolean>
+        <boolean id="movable">true</boolean>
+        <enumeration id="collisionShape">0</enumeration>
+        <real id="drag">0</real>
+        <real id="angularDrag">0</real>
+        <boolean id="canSleep">true</boolean>
+        <boolean id="betterColisions">false</boolean>
+      </attributes>
+    </physics>
+  </aspects>
+</actor>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assets PGFVersion="0.25" GSCVersion="1.25.6227">
+  <sounds>
+    <sound name="JuhaniJunkala[RetroGameMusicPack]TitleScreen">
+      <file name="JuhaniJunkala[RetroGameMusicPack]TitleScreen.ogg" size="215190" />
+    </sound>
+    <sound name="Pew__001">
+      <file name="Pew__001.ogg" size="8361" />
+    </sound>
+    <sound name="Pew__002">
+      <file name="Pew__002.ogg" size="8836" />
+    </sound>
+    <sound name="Pew__003">
+      <file name="Pew__003.ogg" size="8393" />
+    </sound>
+    <sound name="Pew__004">
+      <file name="Pew__004.ogg" size="7591" />
+    </sound>
+    <sound name="Pew__005">
+      <file name="Pew__005.ogg" size="8499" />
+    </sound>
+    <sound name="Pew__006">
+      <file name="Pew__006.ogg" size="8256" />
+    </sound>
+    <sound name="Pew__007">
+      <file name="Pew__007.ogg" size="7688" />
+    </sound>
+    <sound name="Pew__008">
+      <file name="Pew__008.ogg" size="6892" />
+    </sound>
+    <sound name="Pew__009">
+      <file name="Pew__009.ogg" size="6990" />
+    </sound>
+    <sound name="Pew__010">
+      <file name="Pew__010.ogg" size="6652" />
+    </sound>
+  </sounds>
+  <images>
+    <image name="1">
+      <file name="1.png" size="15069" />
+    </image>
+    <image name="1B">
+      <file name="1B.png" size="15375" />
+    </image>
+    <image name="2">
+      <file name="2.png" size="24673" />
+    </image>
+    <image name="2B">
+      <file name="2B.png" size="25614" />
+    </image>
+    <image name="3">
+      <file name="3.png" size="43412" />
+    </image>
+    <image name="3B">
+      <file name="3B.png" size="45068" />
+    </image>
+    <image name="4">
+      <file name="4.png" size="22095" />
+    </image>
+    <image name="4B">
+      <file name="4B.png" size="24181" />
+    </image>
+    <image name="5">
+      <file name="5.png" size="18363" />
+    </image>
+    <image name="5B">
+      <file name="5B.png" size="19024" />
+    </image>
+    <image name="6">
+      <file name="6.png" size="18372" />
+    </image>
+    <image name="6B">
+      <file name="6B.png" size="18959" />
+    </image>
+    <image name="7">
+      <file name="7.png" size="40327" />
+    </image>
+    <image name="7B">
+      <file name="7B.png" size="42819" />
+    </image>
+    <image name="8">
+      <file name="8.png" size="39442" />
+    </image>
+    <image name="8B">
+      <file name="8B.png" size="40069" />
+    </image>
+    <image name="9">
+      <file name="9.png" size="73113" />
+    </image>
+    <image name="9B">
+      <file name="9B.png" size="77847" />
+    </image>
+    <image name="10">
+      <file name="10.png" size="14008" />
+    </image>
+    <image name="10B">
+      <file name="10B.png" size="15176" />
+    </image>
+    <image name="11B">
+      <file name="11B.png" size="51495" />
+    </image>
+    <image name="12">
+      <file name="12.png" size="22295" />
+    </image>
+    <image name="12B">
+      <file name="12B.png" size="24022" />
+    </image>
+    <image name="13">
+      <file name="13.png" size="21685" />
+    </image>
+    <image name="13B">
+      <file name="13B.png" size="21726" />
+    </image>
+    <image name="EnemyProjectile1">
+      <file name="EnemyProjectile1.png" size="912" />
+    </image>
+    <image name="PlayProjectile">
+      <file name="PlayProjectile.png" size="1004" />
+    </image>
+    <image name="EnemyProjectile2">
+      <file name="EnemyProjectile2.png" size="7216" />
+    </image>
+    <image name="Gods-and-Idols-2012-04-11-21-40-17-86">
+      <file name="Gods-and-Idols-2012-04-11-21-40-17-86.png" size="1348739" />
+    </image>
+    <image name="MegaLaser">
+      <file name="MegaLaser.png" size="7154" />
+    </image>
+  </images>
+  <fonts />
+  <behaviors />
+</assets>

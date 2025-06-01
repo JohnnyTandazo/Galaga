@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actor id="id494980" PGFVersion="0.25" GSCVersion="1.25.6227">
+  <attributes>
+    <text id="name">Boss</text>
+    <real id="time">0</real>
+    <point id="position">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <size id="size">
+      <real id="width">230</real>
+      <real id="height">336</real>
+    </size>
+    <angle id="rotation">0</angle>
+    <color id="color">
+      <real id="red">1</real>
+      <real id="green">1</real>
+      <real id="blue">1</real>
+      <real id="alpha">1</real>
+    </color>
+    <image id="image">9</image>
+    <text id="tags">BossStuff</text>
+    <boolean id="preloadArt">true</boolean>
+    <real id="id262240" name="X">0</real>
+    <boolean id="id297179" name="Damaged">false</boolean>
+  </attributes>
+  <behaviors>
+    <behavior id="id351415" class="LoopBehavior" enabled="true">
+      <attributes>
+        <text id="name">Move</text>
+        <text id="bundleName">Loop.behavior</text>
+        <real id="loopType">0</real>
+        <real id="compoundConditionKind">0</real>
+        <integer id="maxLoopsPerFrame">1</integer>
+      </attributes>
+      <behaviors>
+        <behavior id="id729335" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.aspects.motion.attributes.linearVelocity.x</text>
+            <text id="RHS">
+              <expression>
+                <string xml:space="preserve">sin(</string>
+                <reference keypath="self.attributes.id262240" />
+                <string xml:space="preserve">)*</string>
+                <string xml:space="preserve">400</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+        <behavior id="id442899" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.id262240</text>
+            <text id="RHS">
+              <expression>
+                <reference keypath="self.attributes.id262240" />
+                <string xml:space="preserve">+1</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+      </behaviors>
+    </behavior>
+    <behavior id="id334086" class="TimerBehavior" enabled="true">
+      <attributes>
+        <text id="name">Attack_1</text>
+        <text id="bundleName">Timer.behavior</text>
+        <index id="timerType">0</index>
+        <real id="interval">20</real>
+        <boolean id="runToCompletion">true</boolean>
+      </attributes>
+      <behaviors>
+        <behavior id="id718609" class="TimerBehavior" enabled="true">
+          <attributes>
+            <text id="name">Timer</text>
+            <text id="bundleName">Timer.behavior</text>
+            <index id="timerType">2</index>
+            <real id="interval">2</real>
+            <boolean id="runToCompletion">true</boolean>
+          </attributes>
+          <behaviors>
+            <behavior id="id818665" class="TimerBehavior" enabled="true">
+              <attributes>
+                <text id="name">Timer</text>
+                <text id="bundleName">Timer.behavior</text>
+                <index id="timerType">0</index>
+                <real id="interval">0.01</real>
+                <boolean id="runToCompletion">true</boolean>
+              </attributes>
+              <behaviors>
+                <behavior id="id422746" class="SpawnAction" enabled="true">
+                  <attributes>
+                    <text id="name">Spawn Actor</text>
+                    <text id="bundleName">Spawn.behavior</text>
+                    <text id="prototypeKey">id447971</text>
+                    <angle id="direction">270</angle>
+                    <index id="directionSpace">0</index>
+                    <real id="x">0</real>
+                    <real id="y">-60</real>
+                    <index id="positionSpace">0</index>
+                    <index id="layerOrder">0</index>
+                  </attributes>
+                </behavior>
+              </behaviors>
+            </behavior>
+          </behaviors>
+        </behavior>
+      </behaviors>
+    </behavior>
+    <behavior id="id334297" class="TimerBehavior" enabled="true">
+      <attributes>
+        <text id="name">Attack_2</text>
+        <text id="bundleName">Timer.behavior</text>
+        <index id="timerType">0</index>
+        <real id="interval">3</real>
+        <boolean id="runToCompletion">true</boolean>
+      </attributes>
+      <behaviors>
+        <behavior id="id231008" class="TimerBehavior" enabled="true">
+          <attributes>
+            <text id="name">Timer</text>
+            <text id="bundleName">Timer.behavior</text>
+            <index id="timerType">2</index>
+            <real id="interval">1</real>
+            <boolean id="runToCompletion">true</boolean>
+          </attributes>
+          <behaviors>
+            <behavior id="id670738" class="TimerBehavior" enabled="true">
+              <attributes>
+                <text id="name">Timer</text>
+                <text id="bundleName">Timer.behavior</text>
+                <index id="timerType">0</index>
+                <real id="interval">0.3</real>
+                <boolean id="runToCompletion">true</boolean>
+              </attributes>
+              <behaviors>
+                <behavior id="id590252" class="SpawnAction" enabled="true">
+                  <attributes>
+                    <text id="name">Spawn Actor</text>
+                    <text id="bundleName">Spawn.behavior</text>
+                    <text id="prototypeKey">id447971</text>
+                    <angle id="direction">270</angle>
+                    <index id="directionSpace">0</index>
+                    <real id="x">0</real>
+                    <real id="y">-60</real>
+                    <index id="positionSpace">0</index>
+                    <index id="layerOrder">0</index>
+                  </attributes>
+                </behavior>
+                <behavior id="id619110" class="SpawnAction" enabled="true">
+                  <attributes>
+                    <text id="name">Spawn Actor</text>
+                    <text id="bundleName">Spawn.behavior</text>
+                    <text id="prototypeKey">id637133</text>
+                    <angle id="direction">270</angle>
+                    <index id="directionSpace">0</index>
+                    <real id="x">0</real>
+                    <real id="y">-60</real>
+                    <index id="positionSpace">0</index>
+                    <index id="layerOrder">0</index>
+                  </attributes>
+                </behavior>
+                <behavior id="id178527" class="SpawnAction" enabled="true">
+                  <attributes>
+                    <text id="name">Spawn Actor</text>
+                    <text id="bundleName">Spawn.behavior</text>
+                    <text id="prototypeKey">id996668</text>
+                    <angle id="direction">270</angle>
+                    <index id="directionSpace">0</index>
+                    <real id="x">0</real>
+                    <real id="y">-60</real>
+                    <index id="positionSpace">0</index>
+                    <index id="layerOrder">0</index>
+                  </attributes>
+                </behavior>
+              </behaviors>
+            </behavior>
+          </behaviors>
+        </behavior>
+      </behaviors>
+    </behavior>
+    <behavior id="id423763" class="DisplayTextBehavior" enabled="true">
+      <attributes>
+        <text id="name">Display Text</text>
+        <text id="bundleName">DisplayText.behavior</text>
+        <text id="text">
+          <expression>
+            <reference keypath="self.attributes.id297179" />
+          </expression>
+        </text>
+        <text id="font">Cambay</text>
+        <real id="size">30</real>
+        <index id="alignment">1</index>
+        <boolean id="wrap">false</boolean>
+        <color id="color">
+          <real id="red">0</real>
+          <real id="green">0</real>
+          <real id="blue">0</real>
+          <real id="alpha">1</real>
+        </color>
+        <real id="offsetx">0</real>
+        <real id="offsety">0</real>
+        <index id="space">0</index>
+        <index id="directionSpace">0</index>
+        <angle id="direction">0</angle>
+      </attributes>
+    </behavior>
+    <behavior id="id342680" class="TimerBehavior" enabled="true">
+      <attributes>
+        <text id="name">Timer</text>
+        <text id="bundleName">Timer.behavior</text>
+        <index id="timerType">0</index>
+        <real id="interval">0.5</real>
+        <boolean id="runToCompletion">false</boolean>
+      </attributes>
+      <behaviors>
+        <behavior id="id849574" class="RuleBehavior" enabled="true">
+          <attributes>
+            <text id="name">Rule</text>
+            <text id="bundleName">Rule.behavior</text>
+            <real id="compoundConditionKind">0</real>
+          </attributes>
+          <conditions>
+            <condition id="id550009" eventType="mouse position" pluginPredicateTypeIndex="0" class="AttributeCondition">
+              <attributes>
+                <index id="conditionType">1</index>
+                <text id="subjectAttribute">game.attributes.id404295</text>
+                <text id="name">default name</text>
+              </attributes>
+              <predicate type="number">
+                <attributes>
+                  <text id="operator">&lt;=</text>
+                  <real id="RHS">450</real>
+                </attributes>
+              </predicate>
+            </condition>
+          </conditions>
+          <behaviors>
+            <behavior id="id212009" class="SpawnAction" enabled="true">
+              <attributes>
+                <text id="name">Spawn Actor</text>
+                <text id="bundleName">Spawn.behavior</text>
+                <text id="prototypeKey">id540830</text>
+                <angle id="direction">270</angle>
+                <index id="directionSpace">0</index>
+                <real id="x">0</real>
+                <real id="y">-60</real>
+                <index id="positionSpace">0</index>
+                <index id="layerOrder">0</index>
+              </attributes>
+            </behavior>
+            <behavior id="id989354" class="SpawnAction" enabled="true">
+              <attributes>
+                <text id="name">Spawn Actor</text>
+                <text id="bundleName">Spawn.behavior</text>
+                <text id="prototypeKey">id540830</text>
+                <angle id="direction">225</angle>
+                <index id="directionSpace">0</index>
+                <real id="x">0</real>
+                <real id="y">-60</real>
+                <index id="positionSpace">0</index>
+                <index id="layerOrder">0</index>
+              </attributes>
+            </behavior>
+            <behavior id="id332289" class="SpawnAction" enabled="true">
+              <attributes>
+                <text id="name">Spawn Actor</text>
+                <text id="bundleName">Spawn.behavior</text>
+                <text id="prototypeKey">id540830</text>
+                <angle id="direction">315</angle>
+                <index id="directionSpace">0</index>
+                <real id="x">0</real>
+                <real id="y">-60</real>
+                <index id="positionSpace">0</index>
+                <index id="layerOrder">0</index>
+              </attributes>
+            </behavior>
+            <behavior id="id103518" class="RuleBehavior" enabled="true">
+              <attributes>
+                <text id="name">Rule</text>
+                <text id="bundleName">Rule.behavior</text>
+                <real id="compoundConditionKind">0</real>
+              </attributes>
+              <conditions>
+                <condition id="id214561" eventType="mouse position" pluginPredicateTypeIndex="0" class="AttributeCondition">
+                  <attributes>
+                    <index id="conditionType">1</index>
+                    <text id="subjectAttribute">game.attributes.id404295</text>
+                    <text id="name">default name</text>
+                  </attributes>
+                  <predicate type="number">
+                    <attributes>
+                      <text id="operator">&lt;=</text>
+                      <real id="RHS">400</real>
+                    </attributes>
+                  </predicate>
+                </condition>
+              </conditions>
+              <behaviors>
+                <behavior id="id668715" class="SpawnAction" enabled="true">
+                  <attributes>
+                    <text id="name">Spawn Actor</text>
+                    <text id="bundleName">Spawn.behavior</text>
+                    <text id="prototypeKey">id540830</text>
+                    <angle id="direction">247.5</angle>
+                    <index id="directionSpace">0</index>
+                    <real id="x">0</real>
+                    <real id="y">-60</real>
+                    <index id="positionSpace">0</index>
+                    <index id="layerOrder">0</index>
+                  </attributes>
+                </behavior>
+                <behavior id="id907316" class="SpawnAction" enabled="true">
+                  <attributes>
+                    <text id="name">Spawn Actor</text>
+                    <text id="bundleName">Spawn.behavior</text>
+                    <text id="prototypeKey">id540830</text>
+                    <angle id="direction">292.5</angle>
+                    <index id="directionSpace">0</index>
+                    <real id="x">0</real>
+                    <real id="y">-60</real>
+                    <index id="positionSpace">0</index>
+                    <index id="layerOrder">0</index>
+                  </attributes>
+                </behavior>
+                <behavior id="id317009" class="RuleBehavior" enabled="true">
+                  <attributes>
+                    <text id="name">Rule</text>
+                    <text id="bundleName">Rule.behavior</text>
+                    <real id="compoundConditionKind">0</real>
+                  </attributes>
+                  <conditions>
+                    <condition id="id730161" eventType="mouse position" pluginPredicateTypeIndex="0" class="AttributeCondition">
+                      <attributes>
+                        <index id="conditionType">1</index>
+                        <text id="subjectAttribute">game.attributes.id404295</text>
+                        <text id="name">default name</text>
+                      </attributes>
+                      <predicate type="number">
+                        <attributes>
+                          <text id="operator">&lt;=</text>
+                          <real id="RHS">350</real>
+                        </attributes>
+                      </predicate>
+                    </condition>
+                  </conditions>
+                  <behaviors>
+                    <behavior id="id398129" class="SpawnAction" enabled="true">
+                      <attributes>
+                        <text id="name">Spawn Actor</text>
+                        <text id="bundleName">Spawn.behavior</text>
+                        <text id="prototypeKey">id540830</text>
+                        <angle id="direction">202.5</angle>
+                        <index id="directionSpace">0</index>
+                        <real id="x">0</real>
+                        <real id="y">-60</real>
+                        <index id="positionSpace">0</index>
+                        <index id="layerOrder">0</index>
+                      </attributes>
+                    </behavior>
+                    <behavior id="id724635" class="SpawnAction" enabled="true">
+                      <attributes>
+                        <text id="name">Spawn Actor</text>
+                        <text id="bundleName">Spawn.behavior</text>
+                        <text id="prototypeKey">id540830</text>
+                        <angle id="direction">337.5</angle>
+                        <index id="directionSpace">0</index>
+                        <real id="x">0</real>
+                        <real id="y">-60</real>
+                        <index id="positionSpace">0</index>
+                        <index id="layerOrder">0</index>
+                      </attributes>
+                    </behavior>
+                  </behaviors>
+                </behavior>
+              </behaviors>
+            </behavior>
+          </behaviors>
+        </behavior>
+      </behaviors>
+    </behavior>
+    <behavior id="id304206" class="TimerBehavior" enabled="true">
+      <attributes>
+        <text id="name">Timer</text>
+        <text id="bundleName">Timer.behavior</text>
+        <index id="timerType">0</index>
+        <real id="interval">5</real>
+        <boolean id="runToCompletion">false</boolean>
+      </attributes>
+      <behaviors>
+        <behavior id="id423145" class="RuleBehavior" enabled="true">
+          <attributes>
+            <text id="name">Rule</text>
+            <text id="bundleName">Rule.behavior</text>
+            <real id="compoundConditionKind">0</real>
+          </attributes>
+          <conditions>
+            <condition id="id299572" eventType="mouse position" pluginPredicateTypeIndex="0" class="AttributeCondition">
+              <attributes>
+                <index id="conditionType">1</index>
+                <text id="subjectAttribute">game.attributes.id404295</text>
+                <text id="name">default name</text>
+              </attributes>
+              <predicate type="number">
+                <attributes>
+                  <text id="operator">&lt;=</text>
+                  <real id="RHS">250</real>
+                </attributes>
+              </predicate>
+            </condition>
+          </conditions>
+          <behaviors>
+            <behavior id="id625671" class="SpawnAction" enabled="true">
+              <attributes>
+                <text id="name">Spawn Actor</text>
+                <text id="bundleName">Spawn.behavior</text>
+                <text id="prototypeKey">id440330</text>
+                <angle id="direction">180</angle>
+                <index id="directionSpace">0</index>
+                <real id="x">0</real>
+                <real id="y">-32</real>
+                <index id="positionSpace">0</index>
+                <index id="layerOrder">0</index>
+              </attributes>
+            </behavior>
+            <behavior id="id832619" class="PlaySoundAction" enabled="true">
+              <attributes>
+                <text id="name">Play Sound</text>
+                <text id="bundleName">PlaySound.behavior</text>
+                <sound id="soundName">Pew__002</sound>
+                <boolean id="loop">false</boolean>
+                <boolean id="runToCompletion">true</boolean>
+                <boolean id="positional">false</boolean>
+                <boolean id="dopplerShift">false</boolean>
+                <real id="volume">1</real>
+                <real id="pitch">1</real>
+              </attributes>
+            </behavior>
+          </behaviors>
+        </behavior>
+      </behaviors>
+    </behavior>
+    <behavior id="id506004" class="TimerBehavior" enabled="true">
+      <attributes>
+        <text id="name">Timer</text>
+        <text id="bundleName">Timer.behavior</text>
+        <index id="timerType">0</index>
+        <real id="interval">5</real>
+        <boolean id="runToCompletion">false</boolean>
+      </attributes>
+      <behaviors>
+        <behavior id="id579884" class="RuleBehavior" enabled="true">
+          <attributes>
+            <text id="name">Rule</text>
+            <text id="bundleName">Rule.behavior</text>
+            <real id="compoundConditionKind">0</real>
+          </attributes>
+          <conditions>
+            <condition id="id763739" eventType="mouse position" pluginPredicateTypeIndex="0" class="AttributeCondition">
+              <attributes>
+                <index id="conditionType">1</index>
+                <text id="subjectAttribute">game.attributes.id404295</text>
+                <text id="name">default name</text>
+              </attributes>
+              <predicate type="number">
+                <attributes>
+                  <text id="operator">&lt;=</text>
+                  <real id="RHS">150</real>
+                </attributes>
+              </predicate>
+            </condition>
+          </conditions>
+          <behaviors>
+            <behavior id="id467709" class="SpawnAction" enabled="true">
+              <attributes>
+                <text id="name">Spawn Actor</text>
+                <text id="bundleName">Spawn.behavior</text>
+                <text id="prototypeKey">id440330</text>
+                <angle id="direction">135</angle>
+                <index id="directionSpace">0</index>
+                <real id="x">0</real>
+                <real id="y">-32</real>
+                <index id="positionSpace">0</index>
+                <index id="layerOrder">0</index>
+              </attributes>
+            </behavior>
+            <behavior id="id405429" class="PlaySoundAction" enabled="true">
+              <attributes>
+                <text id="name">Play Sound</text>
+                <text id="bundleName">PlaySound.behavior</text>
+                <sound id="soundName">Pew__002</sound>
+                <boolean id="loop">false</boolean>
+                <boolean id="runToCompletion">true</boolean>
+                <boolean id="positional">false</boolean>
+                <boolean id="dopplerShift">false</boolean>
+                <real id="volume">1</real>
+                <real id="pitch">1</real>
+              </attributes>
+            </behavior>
+            <behavior id="id209875" class="SpawnAction" enabled="true">
+              <attributes>
+                <text id="name">Spawn Actor</text>
+                <text id="bundleName">Spawn.behavior</text>
+                <text id="prototypeKey">id440330</text>
+                <angle id="direction">225</angle>
+                <index id="directionSpace">0</index>
+                <real id="x">0</real>
+                <real id="y">-32</real>
+                <index id="positionSpace">0</index>
+                <index id="layerOrder">0</index>
+              </attributes>
+            </behavior>
+          </behaviors>
+        </behavior>
+      </behaviors>
+    </behavior>
+    <behavior id="id764007" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Rule</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id688164" eventType="mouse position" pluginPredicateTypeIndex="0" class="AttributeCondition">
+          <attributes>
+            <index id="conditionType">1</index>
+            <text id="subjectAttribute">game.attributes.id404295</text>
+            <text id="name">default name</text>
+          </attributes>
+          <predicate type="number">
+            <attributes>
+              <text id="operator">=</text>
+              <real id="RHS">0</real>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id665124" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">game.attributes.id765681</text>
+            <text id="RHS">true</text>
+          </attributes>
+        </behavior>
+        <behavior id="id180332" class="DestroyAction" enabled="true">
+          <attributes>
+            <text id="name">Destroy</text>
+            <text id="bundleName">Destroy.behavior</text>
+          </attributes>
+        </behavior>
+      </behaviors>
+    </behavior>
+  </behaviors>
+  <aspects>
+    <graphics>
+      <attributes>
+        <boolean id="visible">true</boolean>
+        <enumeration id="blendingMode">0</enumeration>
+        <enumeration id="horizontalWrap">0</enumeration>
+        <enumeration id="verticalWrap">0</enumeration>
+        <enumeration id="horizontalAnchor">0</enumeration>
+        <enumeration id="verticalAnchor">0</enumeration>
+        <boolean id="flipHorizontally">false</boolean>
+        <boolean id="flipVertically">false</boolean>
+      </attributes>
+    </graphics>
+    <motion>
+      <attributes>
+        <point id="linearVelocity">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <point id="centerOfMass">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <real id="angularVelocity">0</real>
+        <real id="maxSpeed">0</real>
+        <boolean id="applyMaxSpeed">false</boolean>
+        <boolean id="pin">false</boolean>
+      </attributes>
+    </motion>
+    <physics>
+      <attributes>
+        <real id="density">1</real>
+        <real id="friction">3</real>
+        <real id="restitution">1</real>
+        <boolean id="fixedRotation">false</boolean>
+        <boolean id="movable">true</boolean>
+        <enumeration id="collisionShape">0</enumeration>
+        <real id="drag">0</real>
+        <real id="angularDrag">0</real>
+        <boolean id="canSleep">true</boolean>
+        <boolean id="betterColisions">false</boolean>
+      </attributes>
+    </physics>
+  </aspects>
+</actor>
